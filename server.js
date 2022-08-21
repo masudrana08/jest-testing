@@ -5,7 +5,10 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-
-app.listen(9999, ()=>{
-  console.log('Server is running with port 9999');
+app.get('/users', (req, res)=>{
+  res.send({status:'ok'})
 })
+
+
+app.listen(9999, ()=>console.log(9999 + ' is running'))
+module.exports = app

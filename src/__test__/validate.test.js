@@ -1,6 +1,9 @@
 const validate = require("../validate")
 
 describe('Password Validation', ()=>{
+  test('no password send', ()=>{
+    expect(validate()).toBe(null)
+  })
   test('only alphabet will be false', ()=>{
     expect(validate('dfdjlff')).toBe(false)
   })
